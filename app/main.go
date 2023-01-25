@@ -20,8 +20,8 @@ import (
 )
 
 func main() {
-	// mock wait for the postgres and rmq containers to start properly
-	time.Sleep(time.Second * 5)
+	// mock wait for the rmq containers to start properly
+	time.Sleep(time.Second * 15)
 
 	// load env variables
 	config.Load()
