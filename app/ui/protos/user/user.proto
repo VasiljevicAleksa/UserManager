@@ -1,0 +1,78 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+package proto;
+
+option go_package = "./proto";
+
+service UserService {
+    rpc CreateUser(CreateUserRequest) returns (CreateUserResponse);
+    rpc UpdateUser(UpdateUserRequest) returns (UpdateUserResponse);
+    rpc DeleteUser(DeleteUserRequest) returns (DeleteUserResponse);
+    rpc GetUserPage(UserPageRequest) returns (UserPageResponse);
+}
+
+message CreateUserRequest {
+  string firstname = 1;
+  string lastname = 2;
+  string nickname = 3;
+  string password = 4;
+  string email = 5;
+  string country = 6;
+}
+
+
+message UpdateUserRequest {
+    string id = 1;
+    string firstname = 2;
+    string lastname = 3;
+    string nickname = 4;
+    string password = 5;
+    string email = 6;
+    string country = 7;
+}
+
+message DeleteUserRequest {
+    string id = 1;
+}
+
+message UserPageRequest {
+    message UserFilterOptions {
+        string country = 1;
+        google.protobuf.Timestamp CreatedFrom = 2;
+        google.protobuf.Timestamp CreatedTo = 3;
+    }
+
+    int32 offset = 1;
+    int32 limit = 2;
+    UserFilterOptions filter = 3;
+}
+
+message CreateUserResponse {
+    string id = 1;
+}
+
+message UpdateUserResponse {
+    string id = 1;
+}
+
+message DeleteUserResponse {
+    string id = 1;
+}
+
+message UserPageResponse {
+    message User {
+        string id = 1;
+        string firstname = 2;
+        string lastname = 3;
+        string nickname = 4;
+        string password = 5;
+        string email = 6;
+        string country = 7;
+        optional google.protobuf.Timestamp created = 8;
+    }
+
+    repeated User users = 1;
+}
+
