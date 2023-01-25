@@ -21,11 +21,11 @@ All of the methods in this project respect single responsibility principles. Thi
 
 You'll notice in the code that there is a lot of use of interfaces. Interface gives us a powerfull way to use abstraction. Most of the methods in this service are the implementation of some interface. I like to code this way because it will give me a nice and clean way to mock and write unit tests for any of these methods later. In several places you will notice the following structure:
 
--> repo
-  -> mocks
-     - userRepoMock.go   (3)
-  - userRepo_tests.go    (2)
-  - userRepo.go          (1)
+-> repo <br />
+  -> mocks <br />
+     - userRepoMock.go   (3) <br />
+  - userRepo_tests.go    (2) <br />
+  - userRepo.go          (1) <br />
 
   
 userRepo.go (1) - the interface declaration and the actual methods implementation
