@@ -8,7 +8,7 @@ In addition to the implementation of the necessary functionalities, the purpose 
 4. Infrastructure Layer (provides functionality for accessing external systems like DB server, RMQ, Redis, etc. In our case, here is postgres integration with database migrations, repositories, RMQ integration and notification service responsible for notifying other services about user changes)
 
 app <br />
---> domain <br />
+                    --> domain <br />
 --> infrastructure <br />
 --> services <br />
 --> ui <br />
