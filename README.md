@@ -23,7 +23,7 @@ You'll notice in the code that there is a lot of use of interfaces. Interface gi
 
 -> repo <br />
 &nbsp;&nbsp;&nbsp;-> mocks <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- userRepoMock.go   (3) <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- userRepoMock.go   (3) <br />
 &nbsp;&nbsp;&nbsp;- userRepo_tests.go    (2) <br />
 &nbsp;&nbsp;&nbsp;- userRepo.go          (1) <br />
 
