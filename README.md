@@ -65,6 +65,9 @@ Unit tests are written for critical and high-priority functions, functions that 
 Using a docker-compose file, you can easily run user manager in a container together with Postgres And RMQ containers on the same network. Dockerfile will copy all required files, build the service, run the tests and if everything goes well it creates a docker image. If you have installed docker engine on your computer, just run the following command:
 
     docker-compose up -d
+    
+> :warning: **app/main.go line 24**: Although the RMQ server starts up quickly, it takes a more time to become active and receive requests. For this reason I set the sleep time to 15 seconds. It would be handled differently in production (advanced reconnection strategy), but for demonstration purposes I found a quick solution. If even in these 15 seconds the RMQ server is not active (which is possible) you will se the logs in User Manager say that the connection to the RMQ server failed. In this case please just restart the User Manager container, and the connection to the rabbit will succeed.
+
 
 To make requests, use some UI or tool for querying GRPC services. BloomRPC is a really good and simple tool. In UI layer there are 2 proto files. User proto and Health proto. Just import protos and examples of the requests will be created. But in case you use some others, I'll provide example requests:
 
