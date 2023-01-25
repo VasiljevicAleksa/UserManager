@@ -8,10 +8,10 @@ In addition to the implementation of the necessary functionalities, the purpose 
 4. Infrastructure Layer (provides functionality for accessing external systems like DB server, RMQ, Redis, etc. In our case, here is postgres integration with database migrations, repositories, RMQ integration and notification service responsible for notifying other services about user changes)
 
 -> app <br />
-  <pre><pre>-> domain <br />
-  <pre><pre>-> infrastructure <br />
-  <pre><pre> -> services <br />
-  <pre><pre> -> ui <br />
+----> domain <br />
+----> infrastructure <br />
+----> services <br />
+----> ui <br />
 
 You can also notice 'app/config'. This is where environment variables are loaded immediately after starting the service. Because we can potentially use the environment variables in all layers, I left this aside, so it doesn't belong to any layer.
 
