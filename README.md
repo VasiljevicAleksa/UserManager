@@ -28,9 +28,9 @@ You'll notice in the code that there is a lot of use of interfaces. Interface gi
 &nbsp;&nbsp;&nbsp;- userRepo.go          (1) <br />
 
   
-userRepo.go (1) - the interface declaration and the actual methods implementation
-userRepo_tests.go (2) - unit tests for user repository
-userRepoMock.go (3) - mocked methods for userRepo
+userRepo.go (1) - the interface declaration and the actual methods implementation <br />
+userRepo_tests.go (2) - unit tests for user repository <br />
+userRepoMock.go (3) - mocked methods for userRepo <br />
 
 Establishing good paradigms and consistent, accessible standards for writing clean code can help prevent developers from wasting many meaningless hours on trying to understand others (or their own) work.
 
